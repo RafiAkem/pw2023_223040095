@@ -21,7 +21,7 @@ $hardware = ["Motherboard", "Processor", "Hard Disk", "PC Cooler", "VGA Card", "
     <h2>Macam-macam perangkat keras komputer baru</h2>
     <ol>
         <?php 
-        #array_unshift($hardware, "Card Reader", "Modem");
+        #array_unshift($hardware, "Card Reader", "Modem"); // Bisa pakai ini 
         $hardware[] = "Card Reader";
         $hardware[] = "Modem";
         sort($hardware);
