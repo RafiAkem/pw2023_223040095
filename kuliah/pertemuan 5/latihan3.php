@@ -16,7 +16,7 @@ $mahasiswa = ["Rafi", "Firza", "Darren", "Citayem", "Atta"];
     <h2>Daftar Mahasiswa</h2>
     <?php foreach($binatang as $i => $m) { ?>
     <ul>
-        <li>Nama : <?= $mahasiswa[$i]; ?></li>
+     <li>Nama : <?= $mahasiswa[$i]; ?></li>
      <li>Peliharaan : <?= $binatang[$i]; ?></li>
      <li>Favorit Makanan : <?= $makanan[$i]; ?></li>
     </ul>
