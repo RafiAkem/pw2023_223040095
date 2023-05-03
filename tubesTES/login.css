@@ -1,16 +1,9 @@
-
-      .nav {
-        padding: 50px;
-        opacity: 30%;
-        border: 2px solid;
-      }
       body {
         background-image: url("img/login-bg.jpg");
         background-size: cover;
         margin: 0;
         padding: 0;
       }
-
 
       form {
         margin: auto;

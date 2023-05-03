@@ -1,30 +1,74 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Registration Page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="register.css">
-  </head>
-  <body>
-    <form>
-        <h1>Register</h1>
-      <label for="fullname">Full Name:</label>
-      <input type="text" id="fullname" name="fullname" required><br><br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br><br>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required><br><br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required><br><br>
-      <label for="confirm_password">Confirm Password:</label>
-      <input type="password" id="confirm_password" name="confirm_password" required><br><br>
-      <div class="button">
-        <input type="submit" value="Register">
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page</title>
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<style>
+  .navbar-brand {
+    font-family: Viga;
+    font-size: 32px;
+  }
+
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+  }
+
+  .card-header {
+    background-color: #28a745;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.php">No'Akem</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card shadow-lg rounded" style="background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(5px);">
+          <div class="card-body">
+            <h4 class="text-center mb-4" style="font-size: 28px;">Register</h4>
+            <hr>
+            <!-- Form Start -->
+            <form action="#">
+              <div class="form-group">
+                <label for="username" style="color: black; font-size: 18px;">Username/Email</label>
+                <input type="text" class="form-control" id="username" style="color: black; font-size: 18px;">
+              </div>
+              <div class="form-group">
+                <label for="password" style="color: black; font-size: 18px;">Password</label>
+                <input type="password" class="form-control" id="password" style="color: black; font-size: 18px;">
+              </div>
+              <button type="submit" class="btn btn-success btn-block mt-3" style="width: 100%; font-size: 20px;">Register</button>
+              <p class="mt-4 mb-0 text-center" style="color: black; font-size: 18px;">Sudah Punya Akun? <a href="register.php">Login</a>!</p>
+            </form>
+            <!-- Form End -->
+          </div>
+        </div>
       </div>
-      <div class="create">
-        <p>Sudah Punya Akun? <a href="login.php">Login Disini!</a></p>
-      </div>
-    </form>
-  </body>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
