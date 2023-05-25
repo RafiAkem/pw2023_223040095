@@ -51,21 +51,21 @@
             <h4 class="text-center mb-4" style="font-size: 28px;">Login</h4>
             <hr>
             <!-- Form Start -->
-            <form action="#">
-              <div class="form-group">
+            <div class="form-group">
+              <form action="" method="post">
                 <label for="username" style="color: black; font-size: 18px;">Username/Email</label>
                 <input type="text" class="form-control" id="username" style="color: black; font-size: 18px;">
-              </div>
-              <div class="form-group">
-                <label for="password" style="color: black; font-size: 18px;">Password</label>
-                <input type="password" class="form-control" id="password" style="color: black; font-size: 18px;">
-              </div>
-              <div class="form-group form-check" style="margin-top:3%">
-                <input type="checkbox" class="form-check-input" id="rememberMe">
-                <label class="form-check-label" for="rememberMe" style="color: black; font-size: 18px;">Remember Me</label>
-              </div>
-              <button type="submit" class="btn btn-success btn-block" style="width: 100%; font-size: 20px;">Login</button>
-              <p class="mt-4 mb-0 text-center" style="color: black; font-size: 18px;">Belum Punya Akun? <a href="register.php">Daftar</a></p>
+            </div>
+            <div class="form-group">
+              <label for="password" style="color: black; font-size: 18px;">Password</label>
+              <input type="password" class="form-control" id="password" style="color: black; font-size: 18px;">
+            </div>
+            <div class="form-group form-check" style="margin-top:3%">
+              <input type="checkbox" class="form-check-input" id="rememberMe">
+              <label class="form-check-label" for="rememberMe" style="color: black; font-size: 18px;">Remember Me</label>
+            </div>
+            <button type="submit" class="btn btn-success btn-block" style="width: 100%; font-size: 20px;">Login</button>
+            <p class="mt-4 mb-0 text-center" style="color: black; font-size: 18px;">Belum Punya Akun? <a href="register.php">Daftar</a></p>
             </form>
             <!-- Form End -->
           </div>
