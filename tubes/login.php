@@ -52,7 +52,7 @@
             <hr>
             <!-- Form Start -->
             <div class="form-group">
-              <form action="" method="post">
+              <form action="" method="get ">
                 <label for="username" style="color: black; font-size: 18px;">Username/Email</label>
                 <input type="text" class="form-control" id="username" style="color: black; font-size: 18px;">
             </div>

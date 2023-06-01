@@ -59,7 +59,7 @@
                 <input type="password" class="form-control" id="password" style="color: black; font-size: 18px;">
               </div>
               <button type="submit" class="btn btn-success btn-block mt-3" style="width: 100%; font-size: 20px;">Register</button>
-              <p class="mt-4 mb-0 text-center" style="color: black; font-size: 18px;">Sudah Punya Akun? <a href="register.php">Login</a>!</p>
+              <p class="mt-4 mb-0 text-center" style="color: black; font-size: 18px;">Sudah Punya Akun? <a href="login.php">Login</a>!</p>
             </form>
             <!-- Form End -->
           </div>

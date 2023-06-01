@@ -31,7 +31,7 @@ function tambah($data) {
   $gambar = $data['gambar'];
 
   $query = "INSERT INTO
-              mahasiswa
+              mahasiswa 
             VALUES
               (null, '$nim', '$nama', '$email', '$jurusan', '$gambar')";
 

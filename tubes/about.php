@@ -52,4 +52,5 @@
         </div>
     </div>
 </section>
+
 <?php require('partials/footer.php') ?>

@@ -1,0 +1,24 @@
+<?php
+define('BASE_URL', '/pw2023_223040095/tubes');
+
+function koneksi()
+{
+    $conn = mysqli_connect('localhost', 'root', '', 'berita_new') or die('KONEKSI GAGAL!');
+    return $conn;
+}
+
+$conn = koneksi();
+
+
+function query($query)
+{
+    $conn = koneksi();
+    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+    $rows = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $rows[] = $row;
+    }
+
+    return $rows;
+}
