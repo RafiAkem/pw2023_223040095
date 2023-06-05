@@ -1,14 +1,17 @@
-<!doctype html>
-<html lang="en">
+<?php
+session_start();
+if (!isset($_SESSION["login"])) {
+  header("location: login.php");
+  exit;
+}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin Page</title>
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-</head>
+require('functions.php');
+$news = query("SELECT * FROM berita");
+
+require('partials/header.php');
+
+?>
+
 <style>
   .navbar-brand {
     font-family: Viga;
@@ -48,7 +51,7 @@
         </ul>
         <img src="user.png" class="img-fluid" style="width:2%">
         <div class="navbar-nav my-2">
-          <a class="nav-item btn btn-primary ms-3" href="#">Sign Out</a>
+          <a class="nav-item btn btn-primary ms-3" href="logout.php">Sign Out</a>
         </div>
       </div>
     </div>
@@ -61,15 +64,24 @@
             <h4>Dashboard Admin</h4>
           </div>
           <div class="card-body">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, et. Quos ea consequuntur omnis. Totam dolores illo nihil laboriosam saepe, dignissimos enim dolor non quam et ipsa vero, voluptatum minus.</p>
-            <a href="#" class="btn btn-success">Add</a>
-            <a href="#" class="btn btn-primary">Edit</a>
-            <a href="#" class="btn btn-danger">Delete</a>
+            <p>Selamat Datang Admin!</p>
+            <a href="admin/add.php" class="btn btn-success">Tambah Berita</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <?php foreach ($news as $item) : ?>
+    <div class="card my-5 mx-5 justify-content-center">
+      <div class="card-body">
+        <h5 class="card-title"><?= $item['title']; ?></h5>
+        <p class="card-text"><?= $item['content']; ?></p>
+        <button type="button" class="btn btn-primary">Edit</button>
+        <button type="button" class="btn btn-danger">Hapus</button>
+      </div>
+    </div>
+  <?php endforeach; ?>
+
 </body>
 
 </html>
