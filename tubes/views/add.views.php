@@ -14,6 +14,7 @@ require('../partials/nav.php'); ?>
         </div>
         <div class="mb-3">
             <label for="gambar" class="form-label">Gambar</label>
+            <img src="" alt="">
             <input type="file" name="image" class="form-control" id="gambar" required>
         </div>
         <div class="mb-3">
@@ -29,5 +30,6 @@ require('../partials/nav.php'); ?>
     </form>
 </div>
 
+<script src="../script.js"></script>
 <?php
 require('../partials/footer.php') ?>

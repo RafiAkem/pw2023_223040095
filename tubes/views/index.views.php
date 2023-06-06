@@ -66,6 +66,7 @@
               <a href="#" class="card-link text-decoration-none text-reset"><?= $item['title'] ?></a>
             </h5>
             <p class="card-text text-truncate"><?= $item['content']; ?></p>
+            <p class="card-text text-capitalize"><?= $item['category']; ?></p>
             <p class="card-text"><small class="text-body-secondary"><?= $item['timestamp'] ?></small></p>
           </div>
         </div>

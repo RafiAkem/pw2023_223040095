@@ -128,6 +128,11 @@ function uploadImage()
 function deleteNews($id)
 {
     global $conn;
+
+    //untuk menghapus gambar di folder img/upload
+    $news = query("SELECT * FROM berita WHERE id = $id")[0];
+    unlink('../img/upload/' . $news['image']);
+
     mysqli_query($conn, "DELETE FROM berita WHERE id = $id");
     return mysqli_affected_rows($conn);
 }
