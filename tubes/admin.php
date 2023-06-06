@@ -8,6 +8,11 @@ if (!isset($_SESSION["login"])) {
 require('functions.php');
 $news = query("SELECT * FROM berita");
 
+//tombol cari ditekan
+if (isset($_POST['cari'])) {
+  $news = cari($_POST['keyword']);
+}
+
 require('partials/header.php');
 
 ?>
@@ -71,13 +76,19 @@ require('partials/header.php');
       </div>
     </div>
   </div>
+
+  <form class="d-flex mx-5 my-3" action="" method="post">
+    <input class="form-control me-2" type="text" name="keyword" autofocus placeholder="Masukkan Keyword pencarian" autocomplete="off">
+    <button class="btn btn-outline-success" name="cari" type="submit">Cari!</button>
+  </form>
+
   <?php foreach ($news as $item) : ?>
-    <div class="card my-5 mx-5 justify-content-center">
+    <div class="card my-3 mx-5 justify-content-center">
       <div class="card-body">
         <h5 class="card-title"><?= $item['title']; ?></h5>
-        <p class="card-text"><?= $item['content']; ?></p>
-        <button type="button" class="btn btn-primary">Edit</button>
-        <button type="button" class="btn btn-danger">Hapus</button>
+        <p class="card-text"><?= $item['timestamp']; ?></p>
+        <a href="admin/edit.php?id=<?= $item['id']; ?>" class="btn btn-primary">Edit</a>
+        <a href="admin/delete.php?id=<?= $item['id']; ?>" onclick="return confirm('yakin?');" class="btn btn-danger">Hapus</a>
       </div>
     </div>
   <?php endforeach; ?>

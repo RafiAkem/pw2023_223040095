@@ -1,4 +1,6 @@
-<?php require('partials/header.php') ?>
+<?php require('partials/header.php');
+require('partials/nav.php')
+?>
 <style>
     .related-article {
         background-color: #f8f9fa;
@@ -22,7 +24,6 @@
 </head>
 
 <body>
-    <?php require('partials/nav.php') ?>
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-8">

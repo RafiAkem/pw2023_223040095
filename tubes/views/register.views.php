@@ -42,15 +42,15 @@
             <form action="" method="post">
               <div class="form-group">
                 <label for="username" style="color: black; font-size: 18px;">Username/Email</label>
-                <input type="text" name="username" class="form-control" id="username" style="color: black; font-size: 18px;">
+                <input type="text" name="username" class="form-control" id="username" style="color: black; font-size: 18px;" autocomplete="off">
               </div>
               <div class="form-group">
                 <label for="password" style="color: black; font-size: 18px;">Password</label>
-                <input type="password" name="password" class="form-control" id="password" style="color: black; font-size: 18px;">
+                <input type="password" name="password" class="form-control" id="password" style="color: black; font-size: 18px;" autocomplete="off">
               </div>
               <div class="form-group">
                 <label for="password" style="color: black; font-size: 18px;">Konfirmasi Password</label>
-                <input type="password" name="konfirmasi" class="form-control" id="password" style="color: black; font-size: 18px;">
+                <input type="password" name="konfirmasi" class="form-control" id="password" style="color: black; font-size: 18px;" autocomplete="off">
               </div>
               <button type="submit" name="register" class="btn btn-success btn-block mt-3" style="width: 100%; font-size: 20px;">Register</button>
               <p class="mt-4 mb-0 text-center" style="color: black; font-size: 18px;">Sudah Punya Akun? <a href="login.php">Login</a>!</p>

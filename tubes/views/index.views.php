@@ -51,25 +51,30 @@
   <!-- CAROUSEL END -->
   <br>
   <!-- START LATEST NEWS -->
-  <div class="header-1 mx-4">
-    <h2>LATEST</h2>
-    <?php foreach ($news as $item) : ?>
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./img/upload/<?= $item['image'] ?>" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title"><?= $item['title'] ?></h5>
-              <p class="card-text text-truncate"><?= $item['content']; ?></p>
-              <p class="card-text"><small class="text-body-secondary"><?= $item['timestamp'] ?></small></p>
-            </div>
+  <h3>LATEST NEWS</h3>
+  <?php foreach ($news as $item) : ?>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <a href="#" class="card-link">
+            <img src="./img/upload/<?= $item['image'] ?>" class="img-fluid rounded-start" style="width:200px; height:250px;" alt=" ...">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="#" class="card-link text-decoration-none text-reset"><?= $item['title'] ?></a>
+            </h5>
+            <p class="card-text text-truncate"><?= $item['content']; ?></p>
+            <p class="card-text"><small class="text-body-secondary"><?= $item['timestamp'] ?></small></p>
           </div>
         </div>
       </div>
-    <?php endforeach; ?>
+    </div>
+  <?php endforeach; ?>
   </div>
+
+
 
   <?php
   require('partials/footer.php') ?>

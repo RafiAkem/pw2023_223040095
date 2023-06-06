@@ -44,11 +44,11 @@
             <div class="form-group">
               <form action="" method="post">
                 <label for="username" style="color: black; font-size: 18px;">Username/Email</label>
-                <input type="text" name="username" class="form-control" id="username" style="color: black; font-size: 18px;">
+                <input type="text" name="username" class="form-control" id="username" style="color: black; font-size: 18px;" autocomplete="off">
             </div>
             <div class="form-group">
               <label for="password" style="color: black; font-size: 18px;">Password</label>
-              <input type="password" name="password" class="form-control" id="password" style="color: black; font-size: 18px;">
+              <input type="password" name="password" class="form-control" id="password" style="color: black; font-size: 18px;" autocomplete="off">
             </div>
             <div class="form-group form-check" style="margin-top:3%">
               <input type="checkbox" class="form-check-input" id="rememberMe">
