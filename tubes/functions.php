@@ -169,8 +169,6 @@ function editNews($data)
 }
 
 
-
-
 //function cari di admin
 function cari($keyword)
 {
@@ -181,4 +179,18 @@ function cari($keyword)
                 timestamp LIKE '%$keyword%'
             ";
     return query($query);
+}
+
+//function comment
+function comment($data)
+{
+    global $conn;
+    $comment = htmlspecialchars($data['comment']);
+
+    $news_id = htmlspecialchars($data['newsId']);
+
+    $query = "INSERT INTO comments VALUES (null,'$comment', NOW(), '$news_id')";
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
 }

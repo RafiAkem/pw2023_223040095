@@ -24,55 +24,40 @@
           <h6>Some representative placeholder content for the first slide.</h6>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="img/carousel2.png" style="width:1000px; height:562px" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Kasus Lift Bandara Kualanamu, Siapa Tanggung Jawab?</h5>
-          <h6>Some representative placeholder content for the second slide.</h6>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="img/carousel3.png" style="width:1000px; height:560px" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <h6>Some representative placeholder content for the third slide.</h6>
-        </div>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <!-- CAROUSEL END -->
-  <br>
-  <!-- START LATEST NEWS -->
-  <h3>LATEST NEWS</h3>
-  <?php foreach ($news as $item) : ?>
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <a href="#" class="card-link">
-            <img src="./img/upload/<?= $item['image'] ?>" class="img-fluid rounded-start" style="width:200px; height:250px;" alt=" ...">
-          </a>
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="#" class="card-link text-decoration-none text-reset"><?= $item['title'] ?></a>
-            </h5>
-            <p class="card-text text-truncate"><?= $item['content']; ?></p>
-            <p class="card-text text-capitalize"><?= $item['category']; ?></p>
-            <p class="card-text"><small class="text-body-secondary"><?= $item['timestamp'] ?></small></p>
+    <!-- CAROUSEL END -->
+    <br>
+    <!-- START LATEST NEWS -->
+    <h3>LATEST NEWS</h3>
+    <?php foreach ($news as $item) : ?>
+      <div class="card mb-3 mx-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <a href="#" class="card-link">
+              <img src="./img/upload/<?= $item['image'] ?>" class="img-fluid rounded-start" style="object-fit:cover; width:540px; height:300px;" alt=" ...">
+            </a>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="./berita.php?id=<?= $item['id'] ?>" class="card-link text-decoration-none text-reset"><?= $item['title'] ?></a>
+              </h5>
+              <p class="card-text text-truncate"><?= $item['content']; ?></p>
+              <p class="card-text text-capitalize"><?= $item['category']; ?></p>
+              <p class="card-text"><small class="text-body-secondary"><?= $item['timestamp'] ?></small></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  <?php endforeach; ?>
+    <?php endforeach; ?>
   </div>
 
 
