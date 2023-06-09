@@ -15,7 +15,6 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
-                <a href="#" class="nav-link active" aria-current="page">Populer</a>
                 <a href="about.php" class="nav-link active" aria-current="page">About</a>
             </ul>
             <div class="navbar-nav my-2">

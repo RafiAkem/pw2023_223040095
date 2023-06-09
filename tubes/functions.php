@@ -11,6 +11,7 @@ function koneksi()
 //Function untuk melakukan query ke database
 $conn = koneksi();
 
+
 function query($query)
 {
     $conn = koneksi();
@@ -32,6 +33,7 @@ function signup($data)
     $password = mysqli_real_escape_string($conn, $data['password']);
     $password2 = mysqli_real_escape_string($conn, $data['konfirmasi']);
 
+    //cek jika password tidak sama dengan konfirmasi password maka akan muncul alert
     if ($password !== $password2) {
         echo "
 			<script>
@@ -63,6 +65,7 @@ function createNews($data)
 {
     global $conn;
 
+    //htmlspecialchars untuk menghindari hacker seperti masukin tag html
     $title = htmlspecialchars($data['title']);
     $content = htmlspecialchars($data['content']);
     $category = htmlspecialchars($data['category']);
@@ -72,6 +75,7 @@ function createNews($data)
         return false;
     }
 
+    //query untuk insert ke database berita
     $query = "INSERT INTO berita VALUES (null,'$title', '$content', '$image', '$category', NOW())";
     mysqli_query($conn, $query);
 
@@ -133,6 +137,7 @@ function deleteNews($id)
     $news = query("SELECT * FROM berita WHERE id = $id")[0];
     unlink('../img/upload/' . $news['image']);
 
+    //query untuk menghapus data di database
     mysqli_query($conn, "DELETE FROM berita WHERE id = $id");
     return mysqli_affected_rows($conn);
 }
@@ -168,7 +173,6 @@ function editNews($data)
     return mysqli_affected_rows($conn);
 }
 
-
 //function cari di admin
 function cari($keyword)
 {
@@ -181,7 +185,7 @@ function cari($keyword)
     return query($query);
 }
 
-//function comment
+//function comment untuk menambah comment ke news artikel.
 function comment($data)
 {
     global $conn;

@@ -37,7 +37,7 @@
         <div class="card mb-3 mx-3" style="max-width: 900px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <a href="#" class="card-link">
+              <a href="./berita.php?id=<?= $item['id'] ?>" class="card-link">
                 <img src="./img/upload/<?= $item['image'] ?>" class="img-fluid rounded-start" style="object-fit:cover; width:540px; height:300px;" alt=" ...">
               </a>
             </div>

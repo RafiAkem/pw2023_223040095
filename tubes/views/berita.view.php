@@ -167,11 +167,10 @@ require('partials/nav.php')
         <div class="row">
             <div class="col-md-8">
                 <img src="./img/upload/<?= $item['image']; ?>" class="img-fluid mb-3 ratio ratio-16x9" alt="Gambar Artikel">
+                <a class="btn btn-primary my-3" href="print.php?id=<?= $item['id'] ?>" target="_blank">Print</a>
                 <h1 class="mb-3"><?= $item['title']; ?></h1>
                 <p class="whitespace-pre-wrap"><?= nl2br($item['content']); ?></p>
             </div>
-            </li>
-            </ul>
         </div>
     </div>
 
