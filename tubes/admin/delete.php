@@ -1,6 +1,8 @@
 <?php
 require('../functions.php');
 
+$title = 'Delete News | No\'Akem';
+
 $id = $_GET['id'];
 
 if (deleteNews($id) > 0) {

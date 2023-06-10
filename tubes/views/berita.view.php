@@ -173,6 +173,9 @@ require('partials/nav.php')
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
 
     <section class="content-item" id="comments">
         <div class="container">

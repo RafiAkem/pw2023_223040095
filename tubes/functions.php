@@ -11,7 +11,7 @@ function koneksi()
 //Function untuk melakukan query ke database
 $conn = koneksi();
 
-
+//function untuk melakukan query ke database
 function query($query)
 {
     $conn = koneksi();

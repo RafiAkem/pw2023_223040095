@@ -2,7 +2,8 @@
 session_start();
 
 require('functions.php');
-
+$title = 'Login Page';
+// Cek cookie login
 if (isset($_COOKIE["id"]) && isset($_COOKIE["key"])) {
     $id = $_COOKIE["id"];
     $key = $_COOKIE["key"];
@@ -16,12 +17,13 @@ if (isset($_COOKIE["id"]) && isset($_COOKIE["key"])) {
     }
 }
 
+// Cek cookie
 if (isset($_SESSION["login"])) {
     header("location: admin.php");
     exit;
 }
 
-
+// Login
 if (isset($_POST["login"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];

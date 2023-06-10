@@ -6,6 +6,7 @@ if (!isset($_SESSION["login"])) {
 }
 
 require('functions.php');
+$title = 'Admin Page | No\'Akem';
 $news = query("SELECT * FROM berita");
 
 //tombol cari ditekan

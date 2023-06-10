@@ -9,11 +9,13 @@ require('functions.php');
 
 $id = $_GET['id'];
 
+// Cek apakah id kosong jika kosong redirect ke index.php
 if (!$id) {
   header('Location: index.php');
   exit;
 }
 
+// Ambil data berita berdasarkan id
 $item = query("SELECT * FROM berita WHERE id = $id")[0];
 
 $html = '<!DOCTYPE html>

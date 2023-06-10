@@ -1,5 +1,8 @@
-<?php require('partials/header.php') ?>
-<?php require('partials/nav.php') ?>
+<title>About Page | No\'Akem</title>
+<?php require('partials/header.php');
+require('partials/nav.php');
+require('functions.php');
+?>
 <!-- About Section -->
 <section class="vh-100" style="background-color: #f4f5f7;">
     <div class="container py-5 h-100">
