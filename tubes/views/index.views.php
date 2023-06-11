@@ -20,7 +20,9 @@
   <?php require('partials/nav.php') ?>
   <!-- CAROUSEL START -->
   <div class="bg-image" style="background-image: url('img/indonesia.jpg'); height: 650px; background-size: cover; background-position: center;">
-    <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="d-flex justify-content-center align-items-center flex-column h-100">
+      <h1 class="text-white mb-5" style="font-family: 'Comfortaa', cursive;">Selamat Datang Di Portal Berita No'Akem!</h1>
+      <h3 class="text-white mb-3" style="font-family: 'Comfortaa', cursive;">Cari Berita:</h3>
       <form class="d-flex w-50">
         <input class="form-control me-2" name="keyword" id="keyword" type="search" placeholder="Search" aria-label="Search" autofocus autocomplete="off">
       </form>
