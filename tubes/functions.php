@@ -142,6 +142,16 @@ function deleteNews($id)
     return mysqli_affected_rows($conn);
 }
 
+//function untuk menghapus user
+function deleteUser($id)
+{
+    global $conn;
+
+    //query untuk menghapus data di database
+    mysqli_query($conn, "DELETE FROM user WHERE id = $id");
+    return mysqli_affected_rows($conn);
+}
+
 //function edit berita
 function editNews($data)
 {

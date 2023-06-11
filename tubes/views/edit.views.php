@@ -30,7 +30,8 @@ require('../partials/header.php');
     </div>
 </nav>
 <div class="container">
-    <h1 class="mt-5">Ubah Berita</h1>
+    <a href="../admin.php" class="btn btn-primary mt-5">Kembali</a>
+    <h1>Ubah Berita</h1>
     <form action="" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?= $news["id"]; ?>">
         <input type="hidden" name="oldImage" value="<?= $news["image"]; ?>">
@@ -40,24 +41,42 @@ require('../partials/header.php');
         </div>
         <div class="mb-3">
             <label for="konten" class="form-label">Konten</label>
-            <textarea class="form-control" name="content" value="<?= $news["content"]; ?>" id="konten" rows="5" placeholder="Masukkan konten berita" required></textarea>
+            <textarea class="form-control" name="content" id="konten" rows="5" placeholder="Masukkan konten berita"><?= $news["content"]; ?></textarea>
         </div>
         <div class="mb-3">
             <label for="gambar" class="form-label">Gambar</label>
-            <input type="file" name="image" value="<?= $news["image"]; ?>" class="form-control" id="gambar">
+            <input type="file" name="image" class="form-control" id="gambar" onchange="previewImage(event); updateText();">
+            <h5 class="my-3" id="gambar-text">Gambar Saat Ini</h5>
+            <img src="../img/upload/<?= $news["image"] ?>" alt="" id="preview">
         </div>
         <div class="mb-3">
             <label for="kategori" class="form-label">Kategori</label>
-            <select class="form-select" name="category" value="<?= $news["category"]; ?>" id="kategori" required>
-                <option selected disabled value="">Pilih kategori berita</option>
-                <option value="politik">Politik</option>
-                <option value="ekonomi">Ekonomi</option>
-                <option value="olahraga">Olahraga</option>
+            <select class="form-select" name="category" id="kategori">
+                <option value="" disabled>Pilih kategori berita</option>
+                <option value="politik" <?= $news["category"] == "politik" ? "selected" : ""; ?>>Politik</option>
+                <option value="ekonomi" <?= $news["category"] == "ekonomi" ? "selected" : ""; ?>>Ekonomi</option>
+                <option value="olahraga" <?= $news["category"] == "olahraga" ? "selected" : ""; ?>>Olahraga</option>
             </select>
         </div>
-        <button type="submit" name="publish" class="btn btn-primary">Ubah Berita</button>
+        <button type="submit" name="publish" class="btn btn-primary mb-2">Ubah Berita</button>
     </form>
 </div>
 
+<script>
+    // Ganti text dari "Gambar Saat Ini" menjadi "Gambar Sekarang"
+    function updateText() {
+        document.getElementById("gambar-text").innerHTML = "Gambar Sekarang";
+    }
+
+    // Preview gambar
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var preview = document.getElementById('preview');
+            preview.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
 <?php
 require('../partials/footer.php') ?>

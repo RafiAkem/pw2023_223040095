@@ -72,7 +72,7 @@ require('partials/header.php');
           <div class="card-body">
             <p>Selamat Datang Admin!</p>
             <a href="admin/add.php" class="btn btn-success">Tambah Berita</a>
-            <a href="admin/user.php" class="btn btn-primary">Daftar User</a>
+            <a href="user.php" class="btn btn-primary">Daftar User</a>
           </div>
         </div>
       </div>

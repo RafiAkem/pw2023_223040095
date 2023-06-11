@@ -30,7 +30,8 @@ require('../partials/header.php');
     </div>
 </nav>
 <div class="container">
-    <h1 class="mt-5">Tambah Berita</h1>
+    <a href="../admin.php" class="btn btn-primary mt-5">Kembali</a>
+    <h1>Tambah Berita</h1>
     <form action="" method="post" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="judul" class="form-label">Judul</label>
@@ -42,8 +43,8 @@ require('../partials/header.php');
         </div>
         <div class="mb-3">
             <label for="gambar" class="form-label">Gambar</label>
-            <img src="" alt="">
-            <input type="file" name="image" class="form-control" id="gambar" required>
+            <input type="file" name="image" class="form-control" id="gambar" onchange="previewImage(event)">
+            <img id="preview" class="my-3" />
         </div>
         <div class="mb-3">
             <label for="kategori" class="form-label">Kategori</label>
@@ -58,6 +59,15 @@ require('../partials/header.php');
     </form>
 </div>
 
-<script src="../script.js"></script>
+<script>
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var preview = document.getElementById('preview');
+            preview.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
 <?php
 require('../partials/footer.php') ?>
